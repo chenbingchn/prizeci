@@ -6,7 +6,7 @@
             $this->load->helper('url_helper');
         }
         public function get_list() {
-            $sql = 'SELECT * FROM prize';
+            $sql = 'SELECT * FROM prize GROUP BY prize_type';
             $query = $this->db->query($sql);
             return $query->result();
         }
